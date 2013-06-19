@@ -1,0 +1,53 @@
+Term::Multiplexed - Detect terminal multiplexers (screen, tmux)
+
+SYNOPSIS
+
+  use Term::Multiplexed qw(multiplexed attached multiplexer);
+  if(multiplexed) {
+      say "Using " . multiplexer . " as terminal multiplexer";
+      say "Currently " . (attached ? : "not ") . "attached.";
+  }
+
+DESCRIPTION
+
+When running scripts inside screen/tmux, it's often useful to detect this and
+to detect whether the multiplexer of choice is currently attached or not. This
+module does exactly that and nothing more.
+
+EXPORTS
+
+multiplexed
+
+Returns whether we are running inside a terminal multiplexer or not. Currently
+only screen and tmux are detected.
+
+attached
+
+Returns true when the multiplexer is attached. Returns undef when called
+outside a multiplexed environment.
+
+detached
+
+Returns false when the multiplexer is attached. Returns undef when called
+outside a multiplexed environment.
+
+multiplexer
+
+The name of the current multiplexer. Currently only "screen" and "tmux" are
+possible return values.
+
+muxsocket
+
+The full filesystem path to the socket used by the multiplexer.
+
+SEE ALSO
+
+Manpages: screen(1) tmux(1)
+
+AUTHOR
+
+Dennis Kaarsemaker E<lt>dennis@kaarsemaker.netE<gt>
+
+COPYRIGHT AND LICENSE
+
+This software is placed in the public domain, no rights reserved
