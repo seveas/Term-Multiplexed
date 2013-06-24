@@ -5,7 +5,7 @@ use warnings;
 use POSIX qw(access X_OK);
 
 use vars qw($VERSION @EXPORT @EXPORT_OK @ISA);
-$VERSION = "0.2";
+$VERSION = "0.2.2";
 
 BEGIN {
     require Exporter;

@@ -7,4 +7,5 @@ WriteMakefile (
     VERSION_FROM   => 'lib/Term/Multiplexed.pm',
     ABSTRACT_FROM  => 'lib/Term/Multiplexed.pm',
     AUTHOR         => 'Dennis Kaarsemaker <dennis@kaarsemaker.net>',
+    LICENSE        => 'Public domain',
 );
